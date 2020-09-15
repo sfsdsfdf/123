@@ -1,0 +1,45 @@
+<Button>
+    font_size:25
+    size_hint:(0.5,0.1)
+<TextInput>
+    size_hint:(0.5,0.1)
+<FloatLayout>
+    company_id:company_id
+    target:target
+    details:details
+    Label:
+        size_hint:(0.3,0.1)
+        pos_hint:{"x":0.1,"top":1}
+        text:"Company ID"
+    TextInput:
+        id: company_id
+        pos_hint:{"x":0.5,"top":1}
+        multiline:False
+    Label:
+        size_hint:(0.3,0.1)
+        pos_hint:{"x":0.1,"top":0.8}
+        text:"Target"
+    TextInput:
+        id: target
+        pos_hint:{"x":0.5,"top":0.8}
+        multiline:False
+    Button:
+        size_hint:(0.5,0.1)
+        pos_hint:{"x":0,"top":0.53}
+        text:"Add"
+        on_press:root.add_company()
+    Button:
+        pos_hint:{"x":0.5,"top":0.53}
+        size_hint:(0.5,0.1)
+        text:"Submit"
+        on_press:root.update()
+    Label:
+        id:details
+        size_hint:(0.3,0.1)
+        pos_hint:{"x":0.1,"top":0.38}
+        text:""
+    Button:
+        pos_hint:{"x":0.65,"top":0.15}
+        size_hint:(0.3,0.1)
+        text:"Stop"
+        on_press:root.stop()
